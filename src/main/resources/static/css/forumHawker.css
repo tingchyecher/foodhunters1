@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+
+}
+
+/* Common styles */
+
+.padTop20 {
+    padding-top: 20px;
+}
+
+.padLeft30 {
+    padding-left: 30px;
+}
+
+.paddingLeft10 {
+    padding-left: 10px;
+}
+
+.padRight20 {
+    padding-right: 20px;
+}
+
+.pagenum {
+    display: flex;
+    width: 100%;
+}
+
+.replyButton {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+
+.posting {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    background-color:lightgray
+}
+
+
+.posting img {
+    width: 30%;
+
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    background-color:whitesmoke
+}
+
+.list-group-item {
+    background-color:whitesmoke
+}
+
+/* New */
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+
+.post-button {
+    width: auto;
+}
+
+.postgroup {
+    width: auto;
+}
+
+.d-grid {
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+
+}
+
+.mobilenavi {
+    display: none;
+}
+
+.mobileReply {
+    display: none;
+}
+#postContent {
+    height: 100px;
+    margin-bottom: 0;
+}
+
+.like__btn {
+    padding: 10px 15px;
+    background: #0080ff;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px;
+    color: #e8efff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .mobile-screen {
+        display: none;
+    }
+
+    .replyButton {
+        display: none;
+    }
+
+    .mobileReply {
+        display: grid;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    .mobilenavi {
+        display: block;
+    }
+
+    .posting {
+        width: 100%;
+        display: flex;
+      
+    }
+
+    .posting img {
+        width: 30%;
+    
+    }
+
+    .card-group {
+        width: auto;
+    }
+
+    .card-footer {
+        display;
+    }
+
+}

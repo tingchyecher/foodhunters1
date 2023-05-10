@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/content.css" />
+</head>
+
+<body th:fragment="content">
+    <!-- Welcome message -->
+    <div>
+        <h2 class="welcomeMsg">" Welcome to FoodHunters, we are a social network platform for foodies located in
+            Singapore. <br> Come and join us in discussing about the latest food trends. "</h2>
+    </div>
+
+    <!-- Forum section -->
+    <div class="forum">
+        <h1 class="centerText"> Forums</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 padding50 welcomeMsg">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top imageSize" src="images/restaurants.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Singapore Restaurants</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top imageSize" src="images/hawker.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Singapore Hawkers</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top imageSize" src="images/French-cuisine.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Overseas</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Line Seperator -->
+    <div class="padding20">
+        <div class="seperator"></div>
+    </div>
+
+    <!-- Food Tour section -->
+    <div class="foodTour">
+        <h1 class="centerText">Join us on our Food Tour</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 padding50 welcomeMsg">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top imageSize" src="images/asian-food.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Crazy Rich Asian</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top imageSize" src="images/king.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Eat like a Sultan</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top imageSize" src="images/chinatown3.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Chinatown food</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

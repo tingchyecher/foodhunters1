@@ -1,0 +1,35 @@
+.imageSize {
+    width: auto; /* Set the width of the image */
+    height: 300px; /* Set the height of the image */
+    object-fit: cover; /* Resize the image to fill the square area */
+  }
+
+.welcomeMsg {
+  margin: auto;
+  text-align: center;
+  padding: 40px 10px;
+  background-color: lightgray;
+}
+
+.centerText {
+    text-align: center;
+    padding: 50px 0 10px 0;
+}
+
+.container2 {
+    border-top: 1px solid black;
+    padding-bottom: 90px;
+}
+
+.padding50 {
+  padding: 50px;
+}
+
+.padding20 {
+  padding: 0 20px;
+}
+
+.seperator {
+  margin: 50px 0 0 0;
+  border-top: 1px solid black;
+}

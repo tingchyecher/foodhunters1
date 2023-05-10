@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/myStyles.css" />
+    <title>About Us Foodhunters</title>
+</head>
+
+<style>
+
+  .aboutus {
+    text-align: center;
+    padding: 24px;
+  }
+
+  .profile {
+    text-align: center;
+    padding: 24px
+  }
+
+  .contact {
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  }
+
+.mission {
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background-color: lightgray;
+
+}
+
+.card {
+  height: 580px;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.card-title {
+  text-align: center;
+}
+
+
+
+.container {
+  justify-content: center;
+  align-content: center;
+}
+
+.contact {
+  background-color: lightgray
+}
+
+.pic {
+  height:280px;
+  width: 280px;
+}
+
+.link {
+  height: 50px;
+  width:  50px;
+  padding-top: 10px;
+
+}
+
+.git {
+  height: 50px;
+  width:  80px;
+  padding-top: 10px;
+
+}
+
+</style>
+
+<body>
+
+    <!-- Insert Navbar -->
+    <div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
+
+    <!-- Insert Image Carousel -->
+    <div th:insert="~{common/carousel :: carousel}" id="carousel"></div>
+
+    
+   
+    <!-- Content of About Us -->
+    
+        <div class="aboutus">
+            <h1>About Us</h1>
+        </div>
+
+        <!-- Mission -->
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>Our website aims to create a community of passionate food lovers who are always on the lookout for the most delectable dishes, from street food to Michelin-starred restaurants.</p>
+            <p> 
+            Our mission is to celebrate the joy of good food and bring together a diverse group of people who share this passion. Through our platform, we aim to provide valuable insights, reviews, and recommendations to our audience, helping them discover new culinary delights and expand their horizons. 
+          </p>
+          <p>
+            Join us in our quest to explore the world's most succulent food, one bite at a time.
+          </p>
+        </div>
+
+        <!-- Profile of Team Members -->
+
+    <div class="container">
+        <div class="profile">
+            <h2>Profile of Team Members</h2>
+        </div>
+
+        <div class="container bottom-margin imgScale">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card" style="width: 30rem;">
+                      <img class="card-img-top pic" src="images/ting.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Ting</h5>
+                          <p class="card-text">Ting is a highly adaptable individual with a passion for understanding how things work. Always eager to learn new skills and technologies, he made the bold decision to do a mid-career pivot into the ever-evolving tech industry. </p>
+                            <h6>Favourite food: <br/>Yi Liu Xiang Nasi Lemak <br/>Uncle George Katong Laksa</h6>
+                            <a href="https://www.linkedin.com/"><img class= "link" src="images/Link.png" alt="LinkedIn Logo"></a>  
+                            <a href="https://www.github.com"><img class= "git" src="images/GitHub.png" alt="GitHub Logo"></a>
+                          </div>
+                      </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card" style="width: 30rem;">
+                      <img class="card-img-top pic" src="images/haziq.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Haziq</h5>
+                          <p class="card-text">Haziq enjoys the challenge of solving complex problems and puzzles. Programming allows him to express his creativity by building unique solutions to problems. Completing a programming project gives him a sense of accomplishment.</p>
+                          <h6>Favourite Food: <br/> Lau Pa Sat Penyet King Green Sambal Chicken <br/> Luke's Lobster Roll </h6>
+                          <a href="https://www.linkedin.com/"><img class= "link" src="images/Link.png" alt="LinkedIn Logo"></a>  
+                          <a href="https://www.github.com"><img class= "git" src="images/GitHub.png" alt="GitHub Logo"></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card" style="width: 30rem;">
+                      <img class="card-img-top pic" src="images/hizami.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Hizami</h5>
+                          <p class="card-text">Hizami is a curious individual that is always finding ways to be efficient. He is very passionate about tech and is fascinated by how all the intergrated systems work hand in hand which prompted a career shift towards the tech industry.</p>
+                          <h6>Favourite Food: <br/> Victory Restaurant Murtabak<br/> Haji M. Abdul Rajak  Boon Keng Mutton Soup </h6>
+                          <a href="https://www.linkedin.com/"><img class= "link" src="images/Link.png" alt="LinkedIn Logo"></a>  
+                          <a href="https://www.github.com"><img class= "git" src="images/GitHub.png" alt="GitHub Logo"></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card" style="width: 30rem;">
+                      <img class="card-img-top pic" src="images/kh.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Kelvin- K H</h5>
+                          <p class="card-text">K H is an affable, driven and motivated individual looking to better himself every single day. His goal is to code his proprietary profitable trading system and just work on refining his codes in a Bali resort.</p>
+                          <h6>Favourite Food: <br/> Havelock Food Centre Char Kway Teow <br/> Luke's Lobster Roll </h6>
+                          <a href="https://www.linkedin.com/"><img class= "link" src="images/Link.png" alt="LinkedIn Logo"></a>  
+                          <a href="https://www.github.com"><img class= "git" src="images/GitHub.png" alt="GitHub Logo"></a>
+
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Contact Us Now -->
+
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>Please contact us at foodhunters@foodhunters.com for feedback and collaboration.</p>
+        </div>
+
+        <div th:insert="~{common/footer :: footer}" id="footer"></div>
+
+
+    <!-- <div id="mainModal"></div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+<!--    <script>-->
+<!--        // $(document).ready(function()-->
+<!--        {-->
+<!--            $( "#navbar" ).load( "common/navbar.html" );-->
+<!--            $( "#mainModal" ).load( "common/mainModal.html" );-->
+<!--            $( "#footer" ).load( "common/footer.html" );-->
+<!--            $( "#carousel" ).load( "common/carousel.html" );-->
+<!--        };-->
+<!--    </script>-->
+
+
+</body>
+</html>
