@@ -15,12 +15,12 @@ public class Post {
     private Integer idPost;             //retrieve product item by ID - has to be an object
     private String content;
     private String postDate;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String idTopic;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String idUsers;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private String idTopic;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private String idUsers;
 
 
 
@@ -33,8 +33,8 @@ public class Post {
         // database table columns and to be able to save the data in the columns
         this.content = postDTO.getContent();
         this.postDate = postDTO.getPostDate();
-        this.idTopic = postDTO.getIdTopic();
-        this.idUsers = postDTO.getIdUsers();
+//        this.idTopic = postDTO.getIdTopic();
+//        this.idUsers = postDTO.getIdUsers();
 
     }
 
@@ -75,35 +75,35 @@ public class Post {
     }
 
 
-    public String getIdTopic()
-    {
-        return idTopic;
-    }
-
-
-    public void setIdTopic( String idTopic )
-    {
-        this.idTopic = idTopic;
-    }
-
-
-    public String getIdUsers()
-    {
-        return idUsers;
-    }
-
-
-    public void setIdUsers( String idUsers )
-    {
-        this.idUsers = idUsers;
-    }
+//    public String getIdTopic()
+//    {
+//        return idTopic;
+//    }
+//
+//
+//    public void setIdTopic( String idTopic )
+//    {
+//        this.idTopic = idTopic;
+//    }
+//
+//
+//    public String getIdUsers()
+//    {
+//        return idUsers;
+//    }
+//
+//
+//    public void setIdUsers( String idUsers )
+//    {
+//        this.idUsers = idUsers;
+//    }
 
     @Override
     public String toString()
     {
         return "Post{" + "idPost=" + idPost + ", content='" + content + '\'' + ", postDate='" +
-                postDate + '\'' + ", idTopic='"
-                + idTopic + '\'' + ",idUsers='" + idUsers + '}';
+                postDate + '\'' + /*", idTopic='"
+                + idTopic + '\'' + ",idUsers='" + idUsers*/ + '}';
     }
 }
 

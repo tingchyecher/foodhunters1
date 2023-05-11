@@ -2,22 +2,23 @@ package org.generation.foodhunters.controller;
 
 import org.generation.foodhunters.repository.entity.Users;
 import org.generation.foodhunters.service.UsersService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/users")
 public class UsersController {
 
-    @Value("${image.folder}")
-    private String imageFolder;
+//    @Value("${image.folder}")
+//    private String imageFolder;
 
     private final UsersService usersService;
 
     //Dependency Injection of the itemService object so that the Controller can call any methods
     //in the ItemServiceMySQL class
-    public UsersController( @Autowired UsersService usersService )
+    public UsersController(@Autowired UsersService usersService )
     {
         this.usersService = usersService;
     }
@@ -29,11 +30,11 @@ public class UsersController {
 
 
 
-//    @CrossOrigin
-//    @GetMapping( "/all" )
-//    public Iterable<Users> getItems()
-//    {
-//        //To display images from local folder
+    @CrossOrigin
+    @GetMapping( "/all" )
+    public Iterable<Users> getItems()
+    {
+        //To display images from local folder
 //        for (Item image: itemService.all())
 //        {
 //            //productimages/t-shirt1.jpg
@@ -66,14 +67,14 @@ public class UsersController {
 //
 //
 //        //return in the Controller represents a response to the Client
-//        return itemService.all();
-//    }
+        return usersService.all();
+    }
 
-    @CrossOrigin
-    @PostMapping("/add")
-    public void save(  @RequestParam(name="userName", required = true) String userName,
-                       @RequestParam(name="email", required = true) String email,
-                       @RequestParam(name="profilePic", required = true) String profilePic){
+//    @CrossOrigin
+//    @PostMapping("/add")
+//    public void save(  @RequestParam(name="userName", required = true) String userName,
+//                       @RequestParam(name="email", required = true) String email,
+//                       @RequestParam(name="profilePic", required = true) String profilePic){
 
 
 //        //t-shirt_new.jpg
@@ -86,22 +87,22 @@ public class UsersController {
 //
 //        ItemDTO itemDto = new ItemDTO(name, description, imageUrl, style, price);
 //        itemService.save(new Item(itemDto));
-    }
+//    }
 
     //The id value will send from the front-end through the API parameter
-    @CrossOrigin
-    @GetMapping( "/{id}" )
-    public Users findUsersById( @PathVariable Integer idUsers )
-    {
-        return usersService.findById( idUsers );
-    }
-
-    @CrossOrigin
-    @DeleteMapping( "/{id}" )
-    public void delete( @PathVariable Integer id )
-    {
-        usersService.delete( id );
-    }
+//    @CrossOrigin
+//    @GetMapping( "/{id}" )
+//    public Users findUsersById( @PathVariable Integer idUsers )
+//    {
+//        return usersService.findById( idUsers );
+//    }
+//
+//    @CrossOrigin
+//    @DeleteMapping( "/{id}" )
+//    public void delete( @PathVariable Integer id )
+//    {
+//        usersService.delete( id );
+//    }
 }
 
 
