@@ -1,6 +1,5 @@
 package org.generation.foodhunters.service;
 
-
 import org.generation.foodhunters.repository.UsersRepository;
 import org.generation.foodhunters.repository.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;

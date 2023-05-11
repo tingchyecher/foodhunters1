@@ -12,7 +12,7 @@ public class Topic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;             //retrieve product item by ID - has to be an object
+    private Integer idTopic;             //retrieve product item by ID - has to be an object
     private String name;
 
 
@@ -27,15 +27,15 @@ public class Topic {
     }
 
 
-    public Integer getId()
+    public Integer getidTopic()
     {
-        return id;
+        return idTopic;
     }
 
 
-    public void setId( Integer id )
+    public void setidTopic( Integer idTopic )
     {
-        this.id = id;
+        this.idTopic = idTopic;
     }
 
 
@@ -55,7 +55,7 @@ public class Topic {
     @Override
     public String toString()
     {
-        return "Item{" + "id=" + id + ", name='" + name +
+        return "Item{" + "idTopic=" + idTopic + ", name='" + name +
                 '}';
     }
 }
