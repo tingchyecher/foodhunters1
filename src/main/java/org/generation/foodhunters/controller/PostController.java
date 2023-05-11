@@ -56,20 +56,22 @@ public class PostController {
     @PostMapping("/add")
     public void save(  @RequestParam(name="content", required = true) String content,
                        @RequestParam(name="postDate", required = true) String postDate,
-                       @RequestParam("imagefile") MultipartFile multipartFile) throws IOException
+                        @RequestParam(name="idTopic", required = true) Integer idTopic,
+                    @RequestParam(name="idUsers", required = true) Integer idUsers)
+//                       @RequestParam("imagefile") MultipartFile multipartFile) throws IOException
     {
 
-        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+//        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 
 
 //productimages, t-shirt_new.jpg, object
-        FileUploadUtil.saveFile(imageFolder, fileName, multipartFile);
+//        FileUploadUtil.saveFile(imageFolder, fileName, multipartFile);
 
 
 //String fullPath = imageFolder + "/" + imageUrl;
 
 
-        PostDTO postDTO = new PostDTO(content, postDate);
+        PostDTO postDTO = new PostDTO(content, postDate, idTopic, idUsers);
         postService.save(new Post(postDTO));
 
     }
