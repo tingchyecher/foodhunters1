@@ -1,13 +1,21 @@
 package org.generation.foodhunters.controller;
 
+import org.generation.foodhunters.component.FileUploadUtil;
+import org.generation.foodhunters.controller.dto.UsersDTO;
 import org.generation.foodhunters.repository.entity.Users;
 import org.generation.foodhunters.service.UsersService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/users")
 public class UsersController {
 
     @Value("${image.folder}")
@@ -17,7 +25,7 @@ public class UsersController {
 
     //Dependency Injection of the itemService object so that the Controller can call any methods
     //in the ItemServiceMySQL class
-    public UsersController( @Autowired UsersService usersService )
+    public UsersController(@Autowired UsersService usersService )
     {
         this.usersService = usersService;
     }
@@ -29,17 +37,17 @@ public class UsersController {
 
 
 
-//    @CrossOrigin
-//    @GetMapping( "/all" )
-//    public Iterable<Users> getItems()
-//    {
-//        //To display images from local folder
-//        for (Item image: itemService.all())
-//        {
-//            //productimages/t-shirt1.jpg
-//            String setURL = imageFolder + "/" + image.getImageUrl();
-//            image.setImageUrl(setURL);
-//        }
+    @CrossOrigin
+    @GetMapping( "/all" )
+    public Iterable<Users> getItems()
+    {
+        //To display images from local folder
+        for (Users image: usersService.all())
+        {
+            //productimages/t-shirt1.jpg
+            String setURL = imageFolder + "/" + image.getProfilePic();
+            image.setProfilePic(setURL);
+        }
 
 //        //To display images from the Server Container
 //        String connectStr2 = "DefaultEndpointsProtocol=https;AccountName=hizamiproductimagespring;AccountKey=4FZSN0un/Gpa81O0SvBr0vT9WB72G+5ev3584lXef181aOvyREoL/il1l2jIZkQNWqwLGZXkQNFj+AStUvB/pw==;EndpointSuffix=core.windows.net";
@@ -66,29 +74,32 @@ public class UsersController {
 //
 //
 //        //return in the Controller represents a response to the Client
-//        return itemService.all();
-//    }
+        return usersService.all();
+    }
 
     @CrossOrigin
     @PostMapping("/add")
     public void save(  @RequestParam(name="userName", required = true) String userName,
                        @RequestParam(name="email", required = true) String email,
-                       @RequestParam(name="profilePic", required = true) String profilePic){
+                       @RequestParam(name="profilePic", required = true) String profilePic,
+                        @RequestParam("imagefile")
+                        MultipartFile multipartFile) throws
+            IOException
+        {
 
+            //t-shirt_new.jpg
+        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 
-//        //t-shirt_new.jpg
-//        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-//
-//        //productimages , t-shirt_new.jpg, object
-//        FileUploadUtil.saveFile(imageFolder, fileName, multipartFile);
-//
-//        //String fullPath = imageFolder + "/" + imageUrl;
-//
-//        ItemDTO itemDto = new ItemDTO(name, description, imageUrl, style, price);
-//        itemService.save(new Item(itemDto));
+        //productimages , t-shirt_new.jpg, object
+        FileUploadUtil.saveFile(imageFolder, fileName, multipartFile);
+
+        //String fullPath = imageFolder + "/" + imageUrl;
+
+        UsersDTO usersDTO = new UsersDTO(userName, email, profilePic);
+        usersService.save(new Users(usersDTO));
     }
 
-    //The id value will send from the front-end through the API parameter
+//    The id value will send from the front-end through the API parameter
     @CrossOrigin
     @GetMapping( "/{id}" )
     public Users findUsersById( @PathVariable Integer idUsers )
