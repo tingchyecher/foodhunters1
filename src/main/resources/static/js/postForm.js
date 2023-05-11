@@ -17,8 +17,11 @@ newItemForm.addEventListener('submit', (event) => {
 
 
   //1) Select the inputs
-  const name = document.querySelector('#newItemNameInput').value;
-  const description = document.querySelector('#newItemDescription').value
+   console.log("hello world")
+    let postUser = document.querySelector(`#postUser`).value;
+    let postMessage = document.querySelector(`#postMessage`).value;
+    let postImage = "http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif"
+    let postDate = new Date();
 
 
   //Browser security will not be able to track/store the actual path of where you choose your image
@@ -27,18 +30,20 @@ newItemForm.addEventListener('submit', (event) => {
   //console.log(document.querySelector('#newItemImageFile').value + '\n' + "Hello world");
 
 
-  const imageUrl = document.querySelector('#newItemImageFile').value.replace("C:\\fakepath\\", "");
-  const style = document.querySelector('#newItemStyle').value;
-  const price = document.querySelector('#newItemPrice').value;
+//  const imageUrl = document.querySelector('#newItemImageFile').value.replace("C:\\fakepath\\", "");
 
 
-  /* 2)
-      Do the Validation code here
-  */
+
+
+//      Do the Validation code here
+   if (postUser == "" || postMessage == "") {
+         alert("Please fill in all required fields.");
+         return;
+     }
 
 
   // 3)  calls a function from the productController.js to access the API to add items to the database
-  addProduct(name, description, imageUrl, style, price, storeImage);  //arguments
+  addPost(postMessage, postDate);  //arguments
 
 
 });

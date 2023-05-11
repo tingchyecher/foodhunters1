@@ -5,14 +5,17 @@ public class PostDTO {
 
         private String content;
         private String postDate;
+        private Integer idTopic;
+    private Integer idUsers;
 
 
-    public PostDTO( String content, String postDate)
+    public PostDTO( String content, String postDate, Integer idTopic, Integer idUsers)
 
     {
         this.content = content;
         this.postDate = postDate;
-
+        this.idTopic = idTopic;
+        this.idUsers = idUsers;
 
     }
 
@@ -32,4 +35,19 @@ public class PostDTO {
         this.postDate = postDate;
     }
 
+    public Integer getIdTopic() {
+        return idTopic;
+    }
+
+    public void setIdTopic(Integer idTopic) {
+        this.idTopic = idTopic;
+    }
+
+    public Integer getIdUsers() {
+        return idUsers;
+    }
+
+    public void setIdUsers(Integer idUsers) {
+        this.idUsers = idUsers;
+    }
 }
