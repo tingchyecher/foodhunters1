@@ -82,7 +82,7 @@ public class UsersController {
     public void save(  @RequestParam(name="userName", required = true) String userName,
                        @RequestParam(name="email", required = true) String email,
                        @RequestParam(name="profilePic", required = true) String profilePic,
-                        @RequestParam("imagefile")
+                       @RequestParam("imagefile")
                         MultipartFile multipartFile) throws
             IOException
         {

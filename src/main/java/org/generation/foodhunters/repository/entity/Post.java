@@ -15,9 +15,7 @@ public class Post {
     private Integer idPost;             //retrieve product item by ID - has to be an object
     private String content;
     private String postDate;
-
     private Integer idTopic;
-
     private Integer idUsers;
 
 

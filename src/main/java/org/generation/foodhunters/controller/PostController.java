@@ -56,9 +56,9 @@ public class PostController {
     @PostMapping("/add")
     public void save(  @RequestParam(name="content", required = true) String content,
                        @RequestParam(name="postDate", required = true) String postDate,
-                        @RequestParam(name="idTopic", required = true) Integer idTopic,
-                    @RequestParam(name="idUsers", required = true) Integer idUsers)
-//                       @RequestParam("imagefile") MultipartFile multipartFile) throws IOException
+                       @RequestParam(name="idTopic", required = true) Integer idTopic,
+                       @RequestParam(name="idUsers", required = true) Integer idUsers)
+//                     @RequestParam("imagefile") MultipartFile multipartFile) throws IOException
     {
 
 //        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
