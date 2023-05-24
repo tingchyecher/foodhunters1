@@ -45,8 +45,9 @@
 }
 
 
-.posting img {
+#postImg {
     width: 30%;
+    border-radius: 50%;
 
 }
 

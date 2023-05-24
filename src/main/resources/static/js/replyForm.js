@@ -9,8 +9,8 @@
 
 
 //Add an 'onsubmit' event listener for productform to add a product
-let newPostForm = document.getElementById('newPostForm');
-newPostForm.addEventListener('submit', (event) => {
+let newReplyForm = document.getElementById('newReplyForm');
+newReplyForm.addEventListener('submit', (event) => {
 
 
   // Prevent default action of the Form submission
@@ -19,13 +19,15 @@ newPostForm.addEventListener('submit', (event) => {
 
   //1) Select the inputs
    console.log("hello world")
-    let postUser = ""/*document.querySelector(`#postUser`).innerHTML = "Jean" document.querySelector(`#postUser`).value;*/
-     // Hard-Code first!
-    let content = document.querySelector(`#postMessage`).value;
+    let replyUser = ""/*document.querySelector(`#postUser`).innerHTML = "Jean" document.querySelector(`#replyUser`)
+//    .value;*/
+
+    let content = document.querySelector(`#replyMessage`).value;
     let postImage = "http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif"
     let postDate = new Date();
     let idTopic = 1;
-    let idUsers = Math.floor(Math.random() * (1004 - 1001 + 1) ) + 1001;
+    let idUsers = Math.floor(Math.random() * (1005 - 1001 + 1) ) + 1001;
+    console.log(idUsers);
 
 
   //Browser security will not be able to track/store the actual path of where you choose your image
@@ -37,20 +39,18 @@ newPostForm.addEventListener('submit', (event) => {
 //  const imageUrl = document.querySelector('#attachmentFile').value.replace("C:\\fakepath\\", "");
 
 
-
-
 //      Do the Validation code here
-//   if (postUser == "" || content == "") {
+//   if (replyUser == "" || content == "") {
 //         alert("Please fill in all required fields.");
 //         return;
 //     }
 
 
   // 3)  calls a function from the productController.js to access the API to add items to the database
-  addPost(content, postDate,  idTopic, idUsers);  //arguments
+  replyPost(content, postDate,  idTopic, idUsers/*, imageUrl, storeImage*/);  //arguments
 
 
-//// select file input
+// select file input
 //const input = document.querySelector('#attachmentFile');
 //// add event listener
 //input.addEventListener('change', () => {

@@ -6,7 +6,7 @@ public class PostDTO {
         private String content;
         private String postDate;
         private Integer idTopic;
-    private Integer idUsers;
+        private Integer idUsers;
 
 
     public PostDTO( String content, String postDate, Integer idTopic, Integer idUsers)
