@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/FoodTour.css" />
 </head>
 
-<body>
+<body th:fragment="FoodTour">
 
 
 
@@ -35,7 +35,7 @@
             <p class="card-text">Got hit hard by the Crazy Rich Asian fever? Embark on a journey with us to the
               different movie locations and relive the movie magic!</p>
             <p class="card-text">$500</p>
-            <a href="crazyRichAsianTour.html" class="btn btn-primary">More Details</a>
+            <a th:href="@{crazyRichAsianTour}" class="btn btn-primary">More Details</a>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
             <h5 class="card-title">Emperor's Feast</h5>
             <p class="card-text">Do you have the appetite of an Emperor? This tour would definitely satiate your hunger.</p>
             <p class="card-text">$100</p>
-            <a href="#" class="btn btn-primary">More Details</a>
+            <a th:href="@{emperorTour}" class="btn btn-primary">More Details</a>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
             <h5 class="card-title">Eat like a Sultan</h5>
             <p class="card-text">Ever wondered what the Sultans eat on a daily basis? This tour has it all.</p>
             <p class="card-text">$100</p>
-            <a href="#" class="btn btn-primary">More Details</a>
+            <a th:href="@{sultanTour}" class="btn btn-primary">More Details</a>
           </div>
         </div>
       </div>
@@ -71,9 +71,10 @@
           <img src="images/IndianFood.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Maharaja Meal</h5>
-            <p class="card-text">Keen on trying a cuisine that is out of this world to you? Explore the lure of eating like a Maharaja.</p>
+            <p class="card-text">Keen on trying a cuisine that is packed of flavour? Explore the lure of eating like a
+              Maharaja.</p>
             <p class="card-text">$100</p>
-            <a href="#" class="btn btn-primary">More Details</a>
+            <a th:href="@{maharajaTour}" class="btn btn-primary">More Details</a>
           </div>
         </div>
       </div>
