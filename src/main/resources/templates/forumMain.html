@@ -17,12 +17,13 @@
 
 <body th:fragment="forumMain">
 
+
   <!-- Insert Navbar -->
   <div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
 
   <!-- Insert Header -->
   <header class="mobile-display">
-    <h1>FootHunters Forums</h1>
+    <h1>Restaurant Forums</h1>
   </header>
   
   <!-- Insert Trending post - Hawker -->
@@ -56,7 +57,7 @@
               consectetur deserunt fugit quod?</p>
             <p class="card-text">This is a trending post</p>
             <p class="card-text">This is a trending post</p>
-            <a href="" class="btn btn-primary">Let's dig in</a>
+            <a th:href="@{forumRestaurant}" class="btn btn-primary">Let's dig in</a>
           </div>
         </div>
       </div>
@@ -97,6 +98,8 @@
   <!-- Insert Footer -->
   <div th:insert="~{common/footer :: footer}" id="footer"></div>
 
+  <script src="js/productController.js" ></script>
+  <script src="js/postListing.js" ></script>
 </body>
 
 </html>

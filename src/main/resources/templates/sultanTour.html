@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/FoodTour.css" />
+    <title>Eat like a Sultan</title>
+</head>
+
+<body th:fragment="sultanTour">
+<div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
+
+<section>
+    <div class="row padding50 bgColor">
+        <div class="col-lg-6">
+            <div class="card">
+                <div><img src="images/SultanMosque.jpg" alt="Sultan"></div>
+                <div class="imageFlexContainer">
+                    <div class="col-sml-6"><img src="images/Hjh.jpg" alt="Restaurant"></div>
+                    <div class="col-sml-6"><img src="images/Overrice.jpg" alt="Rice"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Eat like a Sultan</h1>
+                    </br>
+                    <h2 class="card-text">$100</h2>
+                    <h3>This tour encompasses:</h3>
+                    </br>
+                    <li class="card-text">Visit the Sultan Mosque</li>
+                    </br>
+                    <p class="size20">
+                        Arab Street is home to beautiful murals painted historic shops selling textiles, perfume and more. Along with traditional Muslim food offerings, some Western restaurants have settled into the area, creating a Singaporean blend of cultures.
+                        </br>
+                        </br>
+                        Make sure to stop at the island’s largest mosque, the Sultan Mosque, a landmark in the
+                        Kampong Glam Malay Heritage District.
+                    </p>
+                    </br>
+                    </br>
+                    <li class="card-text">Food</li>
+                    </br>
+                    <p class="size20">Number 1 on the list: Hjh Maimunah Restaurant and Catering.
+                        </br>
+                        </br>
+                        This restaurant is a name familiar in relation to traditional, Kampung-styled cuisine. With a
+                        variety of dishes such as Beef Rendang, Asam Pedas Fish and Fried Chicken.
+                        </br>
+                        </br>
+                        Singature Dishes: Sudanese Grilled Chicken and barbecued fish - You can't miss
+                        these!
+                        </br>
+                        </br>
+                        Overrice is another great place to eat at. Featuring their all-in-one rice bowls with
+                        slow-cooked pulled beef, grilled chicken and falafels. Topped up with their signature white
+                        and fiery hot chili sauce, it takes flavour to a whole new level.
+                    </p>
+
+                    </br>
+                    <h5 class="card-text">Things to note</h5>
+                    <p>All packages are fixed dated, direct entry tickets, unless otherwise stated
+                        that reservation is required. Fixed dated vouchers are valid only on the selected date (and
+                        time if applicable) only. Tour groups for the day would depend on the number of bookings.
+                        Terms and conditons apply.</p>
+                    <button type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-whatever="@mdo">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<!--    <script>-->
+<!--        $(document).ready(function () {-->
+<!--            $("#navbar").load("common/navbar.html");-->
+<!--            $("#footer").load("common/footer.html");-->
+<!--            $("#Modal").load("common/foodTourDetails.html");-->
+<!--        });-->
+
+<!--        const myModal = document.getElementById-->
+<!--    </script>-->
+
+<div th:insert="~{common/footer :: footer}" id="footer"></div>
+<div th:insert="~{common/foodTourDetails :: foodTourDetails}" id="foodTourDetails"></div>
+</body>
+
+
+
+</html>

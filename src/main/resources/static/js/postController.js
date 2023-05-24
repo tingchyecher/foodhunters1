@@ -1,5 +1,4 @@
-/*
-   ProductController perform action to the products to be displayed
+
 
 
    (1) Display all products to be retrieved from the back-end
