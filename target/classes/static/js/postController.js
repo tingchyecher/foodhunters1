@@ -12,32 +12,34 @@
 //const addAPI= 'http://localhost:8082/post/add';
 //const displayAPI = 'http://localhost:8082/post/all';
 //const userAPI = 'http://localhost:8082/users/all';
-let postController = [];
+
 
 // Production APIs
 const addAPI = 'https://foodhunters.azurewebsites.net/post/add';
 const displayAPI = 'https://foodhunters.azurewebsites.net/post/all';
 const usersAPI = 'https://foodhunters.azurewebsites.net/users/all';
 
-//let userDetails = [];
-//
-//// Fetch the username from the user API
-//function fetchUsername() {
-//  fetch(userAPI)
-//    .then((resp) => resp.json())
-//    .then(function (data) {
-////      userName = data.userName; // Assign the username to the global variable
-//        userDetails = data;
-//      console.log(data);
-//      displayPost(); // Call displayPost() after fetching the username
-//    })
-//    .catch(function (error) {
-//      console.log(error);
-//    });
-//}
-//
-//// Call fetchUsername() to fetch the username before displaying the posts
-//fetchUsername();
+let postController = [];
+
+let usersDetails = [];
+
+// Fetch the username from the user API
+function fetchUsersname() {
+  fetch(usersAPI)
+    .then((resp) => resp.json())
+    .then(function (data) {
+//      userName = data.userName; // Assign the username to the global variable
+        usersDetails = data;
+      console.log(data);
+      displayPost(); // Call displayPost() after fetching the username
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+// Call fetchUsername() to fetch the username before displaying the posts
+fetchUsersname();
 
 function displayPost()
 {
@@ -71,6 +73,59 @@ postController = [];
               console.log(error);
           });
 }
+
+// TimeAgo function
+const timeAgo = (date) => {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+
+  let interval = Math.floor(seconds / 31536000);
+  if (interval > 1) {
+    return interval + ' years ago';
+  }
+
+  interval = Math.floor(seconds / 2592000);
+  if (interval > 1) {
+    return interval + ' months ago';
+  }
+
+  interval = Math.floor(seconds / 86400);
+  if (interval > 1) {
+    return interval + ' days ago';
+  }
+
+  interval = Math.floor(seconds / 3600);
+  if (interval > 1) {
+    return interval + ' hours ago';
+  }
+
+  interval = Math.floor(seconds / 60);
+  if (interval > 1) {
+    return interval + ' minutes ago';
+  }
+
+  if (seconds < 10) return 'just now';
+
+  return Math.floor(seconds) + ' seconds ago';
+
+
+};  //end of timeago function
+
+// Click Counter function
+function counterFunc(postIndex) {
+  if (typeof Storage !== "undefined") {
+    let countKey = `count_${postIndex}`;
+
+    if (localStorage.getItem(countKey)) {
+      localStorage.setItem(countKey, Number(localStorage.getItem(countKey)) + 1);
+    } else {
+      localStorage.setItem(countKey, 1);
+    }
+
+    document.getElementById(`count_${postIndex}`).innerHTML = localStorage.getItem(countKey);
+  } else {
+    document.getElementById("count").innerHTML = "Sorry, the browser you used does not support web storage.";
+  }
+} // End of click counter function
 
 
 //(3)  Display all products when user launch the product.html page
