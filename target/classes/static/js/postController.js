@@ -9,15 +9,15 @@
 
 
 //development APIs
-const addAPI= 'http://localhost:8082/post/add';
-const displayAPI = 'http://localhost:8082/post/all';
-const userAPI = 'http://localhost:8082/users/all';
+//const addAPI= 'http://localhost:8082/post/add';
+//const displayAPI = 'http://localhost:8082/post/all';
+//const userAPI = 'http://localhost:8082/users/all';
 let postController = [];
 
 // Production APIs
-//const addAPI = 'https://.azurewebsites.net/post/add';
-//const displayReplyAPI = 'https://.azurewebsites.net/post/all';
-//const usersAPI = 'https://.azurewebsites.net/users/all';
+const addAPI = 'https://foodhunters.azurewebsites.net/post/add';
+const displayAPI = 'https://foodhunters.azurewebsites.net/post/all';
+const usersAPI = 'https://foodhunters.azurewebsites.net/users/all';
 
 //let userDetails = [];
 //
