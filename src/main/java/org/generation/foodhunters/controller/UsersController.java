@@ -1,5 +1,9 @@
 package org.generation.foodhunters.controller;
 
+import com.azure.storage.blob.BlobClient;
+import com.azure.storage.blob.BlobContainerClient;
+import com.azure.storage.blob.BlobServiceClient;
+import com.azure.storage.blob.BlobServiceClientBuilder;
 import org.generation.foodhunters.component.FileUploadUtil;
 import org.generation.foodhunters.controller.dto.UsersDTO;
 import org.generation.foodhunters.repository.entity.Users;
@@ -42,38 +46,34 @@ public class UsersController {
     public Iterable<Users> getItems()
     {
         //To display images from local folder
+//        for (Users image: usersService.all())
+//        {
+//            //productimages/t-shirt1.jpg
+//            String setURL = imageFolder + "/" + image.getProfilePic();
+//            image.setProfilePic(setURL);
+//        }
+
+        //To display images from the Server Container
+        String connectStr2 = "DefaultEndpointsProtocol=https;AccountName=productimagesfoodhunters;AccountKey=tg11RSVkF7ESwHMmrkmSSE4B9XI1uKWE0OuGQy+67yOS12MYzGdZBFPh+arQCrZCFvH+NR9vETf8+AStXW9o3Q==;EndpointSuffix=core.windows.net";
+        //System.out.println("Connect String: " + connectStr2);
+        BlobServiceClient blobServiceClient = new BlobServiceClientBuilder().connectionString(connectStr2).buildClient();
+        String containerName = "prodimage";
+        BlobContainerClient containerClient = blobServiceClient.getBlobContainerClient(containerName);
+
+        //URL orpath of the azure storage container
+        BlobClient blobClient = containerClient.getBlobClient(usersService.all().get(0).getProfilePic());
+
+
+        //Loop through the ArrayList of itemService.all() and append the Blob url to the imageUrl
         for (Users image: usersService.all())
         {
-            //productimages/t-shirt1.jpg
-            String setURL = imageFolder + "/" + image.getProfilePic();
+
+            //path: productimagesspring/prodimage/t-shirt_new.jpg
+            String setURL = blobClient.getAccountUrl() + "/" + containerName + "/" + image.getProfilePic();
             image.setProfilePic(setURL);
         }
 
-//        //To display images from the Server Container
-//        String connectStr2 = "DefaultEndpointsProtocol=https;AccountName=hizamiproductimagespring;AccountKey=4FZSN0un/Gpa81O0SvBr0vT9WB72G+5ev3584lXef181aOvyREoL/il1l2jIZkQNWqwLGZXkQNFj+AStUvB/pw==;EndpointSuffix=core.windows.net";
-//        //System.out.println("Connect String: " + connectStr2);
-//        BlobServiceClient blobServiceClient = new BlobServiceClientBuilder().connectionString(connectStr2).buildClient();
-//        String containerName = "prodimage";
-//        BlobContainerClient containerClient = blobServiceClient.getBlobContainerClient(containerName);
-//
-//        //URL orpath of the azure storage container
-//        BlobClient blobClient = containerClient.getBlobClient(itemService.all().get(0).getImageUrl());
-//
-//
-//        //Loop through the ArrayList of itemService.all() and append the Blob url to the imageUrl
-//        for (Item image: itemService.all())
-//        {
-//
-//            //path: productimagesspring/prodimage/t-shirt_new.jpg
-//            String setURL = blobClient.getAccountUrl() + "/" + containerName + "/" + image.getImageUrl();
-//            image.setImageUrl(setURL);
-//
-//
-//        }
-//
-//
-//
-//        //return in the Controller represents a response to the Client
+        //return in the Controller represents a response to the Client
         return usersService.all();
     }
 

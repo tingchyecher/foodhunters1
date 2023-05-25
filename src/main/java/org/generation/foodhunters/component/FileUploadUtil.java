@@ -28,7 +28,7 @@ public class FileUploadUtil {
 //    }
 
         /* This is the setup using Azure storage */
-        String connectStr2 = "Put your own connection string";
+        String connectStr2 = "DefaultEndpointsProtocol=https;AccountName=productimagesfoodhunters;AccountKey=tg11RSVkF7ESwHMmrkmSSE4B9XI1uKWE0OuGQy+67yOS12MYzGdZBFPh+arQCrZCFvH+NR9vETf8+AStXW9o3Q==;EndpointSuffix=core.windows.net";
         BlobServiceClient blobServiceClient = new BlobServiceClientBuilder().connectionString(connectStr2).buildClient();
         String containerName = "prodimage";
 

@@ -1,0 +1,42 @@
+.padding50 {
+    padding: 50px;
+}
+/* 
+.card {
+    text-align: center;
+} */
+
+.card-title {
+    font-size: 35px;
+}
+
+
+.card-text {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col {
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.imageFlexContainer {
+    display: flex;
+}
+
+.size20 {
+    font-size: 20px;
+}
+
+.bgColor {
+    background-color: lightgray;
+}

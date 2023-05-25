@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/forumMain.css" />
+
+  <title>Forum - Main Page</title>
+</head>
+
+<body th:fragment="forumMain">
+
+
+  <!-- Insert Navbar -->
+  <div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
+
+  <!-- Insert Header -->
+  <header class="mobile-display">
+    <h1>Restaurant Forums</h1>
+  </header>
+  
+  <!-- Insert Trending post - Hawker -->
+  <div class="container">
+    <h4 class="cardHeader">Trending</h4>
+    <div class="row align-items-start">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="images/forum-hawker-chicken rice.jpeg" class="card-img-top" alt="Chicken rice">
+          <div class="card-body" style="background:beige">
+            <h5 class="card-title"><b>Hawker Food - The best food there is!</b></h5>
+            <div id="hawkerSnippet"></div>
+            <p  class="card-text"> <b><i>Let's dive into the vibrant world of Singaporean hawker food.</i></b>
+              <br>One dish
+              you
+              absolutely can't miss is Hainanese Chicken Rice. Tender poached chicken served with fragrant rice and a
+              delectable soy-based dipping sauce—it's a harmonious blend of flavors that will leave you craving more!
+              Don't forget to try it with a bowl of piping hot chicken broth. #SingaporeFoodie</p><br>
+            <p class="card-text"><b><i>Greetings, fellow food lovers!</i></b> <br>If you're in Singapore, make sure
+              to
+              indulge
+              in the
+              iconic Laksa. This mouthwatering noodle soup features a rich and spicy coconut curry broth, succulent
+              prawns, tofu puffs, fish cakes, and fresh herbs. The combination of flavors is simply divine, and it's
+              an absolute must-try when you're exploring Singapore's hawker centers. #LaksaLove</p><br>
+            <p class="card-text"><b><i>Hey, Satay enthusiasts!</i></b> <br>Singapore's hawker food scene is
+              incomplete
+              without
+              the
+              tantalizing Satay skewers. Succulent chunks of marinated meat—be it chicken, beef, or mutton—grilled to
+              perfection and served with a delicious peanut dipping sauce. The smoky aroma and explosion of flavors
+              make it an irresistible treat. Make sure to order a generous portion! #SatayCravings</p><br>
+            <a th:href="@{forumHawker}" class="btn btn-primary">Let's dig in</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- Insert Trending post - Restaurants -->
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="images/forum-restaurant.webp" class="card-img-top" alt="Restaurant with a view">
+          <div class="card-body" style="background:beige">
+            <h5 class="card-title"><b>Restaurants - The best restaurant guide!</b></h5>
+            <p class="card-text">
+            <p class="card-text" ><b><i>Dining at The Spice Garden</i></b> <br>Attention food connoisseurs!
+            If you're looking
+            for an
+            unforgettable dining experience in Singapore, head to The Spice Garden. This hidden gem offers a fusion of traditional and contemporary flavors, with dishes inspired by Singapore's rich culinary heritage. From aromatic curries to tantalizing seafood creations, every bite will transport you to gastronomic paradise. Book your table now and prepare for a sensational culinary journey!</p>
+            <p class="card-text"><b><i>Delight in Culinary Excellence at SeaBreeze Restaurant</i></b> <br>Calling
+              all
+              seafood
+              enthusiasts! SeaBreeze Restaurant is a must-visit culinary destination in Singapore. Nestled along the picturesque waterfront, this establishment offers an extensive menu featuring the freshest catches of the day. From succulent grilled fish to mouthwatering seafood platters, each dish is a testament to culinary excellence. Immerse yourself in the delightful flavors of the ocean and enjoy a dining experience to remember.</p>
+            <p class="card-text"><b><i>The Green Oasis: Dine in Tranquility at Garden Bistro</i></b> <br>Escape
+              the hustle
+              and
+              bustle
+              of the city and step into the serene oasis of Garden Bistro. Nestled within lush greenery, this restaurant offers a tranquil setting for a memorable dining experience. Indulge in a diverse menu that celebrates fresh ingredients and flavors, from vibrant salads to hearty main courses. With attentive service and a relaxing atmosphere, Garden Bistro is the perfect place to unwind and savor the beauty of nature while enjoying a delightful meal.</p>
+            <a th:href="@{forumRestaurant}" class="btn btn-primary">Let's dig in</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- Insert Trending post - Overseas -->
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="images/forum-overseas.webp" class="card-img-top" alt="...">
+          <div class="card-body" style="background:beige">
+            <h5 class="card-title"><b>Overseas - Something different!</b></h5>
+            <p class="card-text">
+            <p class="card-text"><b><i>Taste of Italy in the Heart of New York: La Trattoria</i></b>
+            <br>Craving authentic Italian cuisine? Look no further than La Trattoria in New York City. This
+            charming restaurant captures the essence of Italy with its homemade pasta, wood-fired pizzas, and delectable seafood dishes. From classic favorites like lasagna to indulgent tiramisu, every bite will transport you to the streets of Rome. Immerse yourself in the flavors of Italy without leaving the Big Apple at La Trattoria.</p>
+            <p class="card-text"><b><i>Exquisite Flavors of Japan at Sushi House Tokyo</i></b>
+              <br>Embark on a culinary journey to Japan at Sushi House Tokyo. Located in the heart of London, this renowned restaurant offers an exquisite selection of sushi and sashimi crafted with the freshest ingredients. From melt-in-your-mouth toro to delicate hand rolls, each piece is a work of art. Immerse yourself in the ambiance of a traditional sushi bar and experience the true essence of Japanese cuisine at Sushi House Tokyo.</p>
+            <p class="card-text"><b><i>Spice Up Your Palate at Tandoori Bites in Sydney</i></b>
+              <br>Craving the vibrant flavors of Indian cuisine? Tandoori Bites in Sydney is the perfect place to
+              satisfy your taste buds. Indulge in a variety of aromatic curries, tandoori grilled meats, and fluffy naan bread. From the fiery heat of a vindaloo to the creamy richness of butter chicken, each dish is a symphony of spices that will transport you to the streets of Mumbai. Spice up your palate and experience the magic of Indian flavors at Tandoori Bites.</p>
+            <a th:href="@{forumOverseas}" class="btn btn-primary">Lets dig in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+<!--  <script>-->
+<!--    $(document).ready(function () {-->
+<!--      $("#navbar").load("common/navbar.html");-->
+<!--      $("#footer").load("common/footer.html");-->
+
+<!--    });-->
+<!--  </script>-->
+
+  <!-- Insert Footer -->
+  <div th:insert="~{common/footer :: footer}" id="footer"></div>
+
+</body>
+
+</html>
