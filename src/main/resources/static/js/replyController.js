@@ -15,7 +15,7 @@
 //const usersAPI = 'http://localhost:8082/users/all';
 
 // Production APIs
-const addAPI = 'https://foodhunters.azurewebsites.net/post/add';
+const replyAPI = 'https://foodhunters.azurewebsites.net/post/add';
 const displayReplyAPI = 'https://foodhunters.azurewebsites.net/post/all';
 const usersAPI = 'https://foodhunters.azurewebsites.net/users/all';
 
