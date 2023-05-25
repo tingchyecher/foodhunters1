@@ -1,6 +1,6 @@
 
 
-
+/*
    (1) Display all products to be retrieved from the back-end
    (2) Add product to the product list (send the new project to the back-end)
    --- edit an existing product detail
