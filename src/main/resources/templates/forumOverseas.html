@@ -7,307 +7,286 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/forumMain.css" />
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/forumHawker.css" />
     <title>Forum - Overseas</title>
 </head>
 
 <body th:fragment="forumOverseas">
 
-    <!-- Insert Navbar -->
-    <div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
+<!-- Insert Navbar -->
+<div th:insert="~{common/navbar :: navbar}" id="navbar"></div>
 
-    <!-- Insert Header -->
-    <header class="padLeft30">
-        <h1>Overseas food - Taste the World, One Bite at a Time!</h1>
-    </header>
-
-
-    <!-- Insert page navigation  -->
-    <nav class="pagenum d-flex justify-content-between mt-5" aria-label="Page navigation example ">
-        <ul class="pagination padLeft30 mobile-screen ms-3">
-            <li class="page-item ">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
+<!-- Insert Header -->
+<header class="padLeft30">
+    <h1>Overseas food - Taste the World, One Bite at a Time!</h1>
+</header>
 
 
+<!-- Insert page navigation  -->
+<nav class="pagenum d-flex justify-content-between mt-5" aria-label="Page navigation example ">
+    <ul class="pagination padLeft30 mobile-screen ms-3">
+        <li class="page-item ">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
 
-        <!-- Insert Add New Post Button into Nav container -->
-        <div class="replyButton gap-2 me-5">
-            <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#addmodal"
+
+
+    <!-- Insert Add New Post Button into Nav container -->
+    <div class="replyButton gap-2 me-5">
+        <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#addmodal"
                 data-bs-whatever="@post">Add New Post</button>
-        </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Page navigation for mobile view -->
-    <!-- <nav class="mobilenavi" aria-label="Page navigation example ">
-        <ul class="pagination pagination-sm justify-content-center">
-            <li class="page-item ">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav> -->
+<!-- Page navigation for mobile view -->
+<!-- <nav class="mobilenavi" aria-label="Page navigation example ">
+    <ul class="pagination pagination-sm justify-content-center">
+        <li class="page-item ">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav> -->
 
-    <!-- Add post button for mobile view -->
-    <!-- <div class="mobileReply mx-auto p-2">
-        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addmodal"
-            data-bs-whatever="@post" type="button">Add New Post</button>
-    </div> -->
+<!-- Add post button for mobile view -->
+<!-- <div class="mobileReply mx-auto p-2">
+    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addmodal"
+        data-bs-whatever="@post" type="button">Add New Post</button>
+</div> -->
 
+<div>
     <!-- Existing Post 1 -->
-    
-        <div class="row m-3 g-0">
-
-            <!-- Card 1 -->
-            <div style="width: 10rem">
-                <div class="card ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-emoji-sunglasses-fill m-4" viewBox="0 0 16 16">
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
-                      </svg>
+    <!-- Card 1  -->
+    <div class="posting padLeft30 padTop20 ">
+        <div class="card-group1 row col-2 col-sm-2">
+            <div class="card text-center " style="width: 18rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                     class="bi bi-emoji-sunglasses-fill mobile-screen" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                </svg>
                 <div class="card-body">
                     <h5 class="card-title">Mr Positive</h5>
                     <p class="card-text">Member</p>
                 </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 4 days ago</small>
+                <div class="card-footer mobile-screen">
+                    <small class="text-body-secondary mobile-screen">Last updated 4 days ago</small>
                 </div>
             </div>
         </div>
-
-            <!-- Card 2 -->
-            <div style="width: 65rem">
-                <div class="card h-100">
-                    <ul class="list-group">
-                        <li class="list-group-item ">Saturday May 20 2023 19:43:32</li>
-                        <!-- <li class="list-group-item"> -->
-                        <div>
-                            <textarea class="form-control " aria-label="With textarea"
-                                rows="8">Immerse yourself in the bustling world of Thai street food, where flavors collide and ignite your taste buds. From tangy Som Tam to flavorful Massaman Curry, zesty Chicken Satay to crispy Pad Krapow, every bite tells a story. Indulge in the authentic charm of Thailand's vibrant culinary scene and let your senses be dazzled by the symphony of spices and fresh ingredients. Get ready for a gastronomic adventure unlike any other! </textarea>
-                        </div>
-                        <!-- </li> -->
-                        <li class="list-group-item">
-                            <div class="p-1 d-grid gap-2 d-flex justify-content-end">
-                                <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#replymodal" data-bs-whatever="@mdo" type="button"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-reply" viewBox="0 0 16 16">
-                                        <path
-                                            d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
-                                    </svg> Reply</button>
-    
-                                <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#linkmodal" data-bs-whatever="" type="button"> <svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-share" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-                                    </svg> Share</button>
-    
-                                <button class="post-button btn btn-primary btn-sm" data-bs-toggle="" data-bs-target="#"
-                                    data-bs-whatever="@mdo" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
-                                    </svg> 15 Like</button>
-    
-                            </div>
-                </div>
-                </li>
-                </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Existing Post 2 -->
-   
-        <div class="row mx-3 mt-5 g-0">
-
-            <!-- Card 1 -->
-            <div style="width: 10rem">
-                <div class="card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-emoji-angry-fill m-4" viewBox="0 0 16 16">
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM4.053 4.276a.5.5 0 0 1 .67-.223l2 1a.5.5 0 0 1 .166.76c.071.206.111.44.111.687C7 7.328 6.552 8 6 8s-1-.672-1-1.5c0-.408.109-.778.285-1.049l-1.009-.504a.5.5 0 0 1-.223-.67zm.232 8.157a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 1 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5 0-.247.04-.48.11-.686a.502.502 0 0 1 .166-.761l2-1a.5.5 0 1 1 .448.894l-1.009.504c.176.27.285.64.285 1.049 0 .828-.448 1.5-1 1.5z"/>
-                      </svg>
-                <div class="card-body">
-                    <h5 class="card-title">Mr Negative</h5>
-                    <p class="card-text">Member</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 weeks ago</small>
-                </div>
-            </div>
-        </div>
-
-            <!-- Card 2 -->
-            <div style="width: 65rem">
-                <div class="card h-100">
-                    <ul class="list-group">
-                        <li class="list-group-item ">Wednesday April 26 2023 19:43:32</li>
-                        <!-- <li class="list-group-item"> -->
-                        <div>
-                            <textarea class="form-control " aria-label="With textarea"
-                                rows="8">Experience the vibrant tapestry of Mexican cuisine that tantalizes the palate. From sizzling fajitas to zesty guacamole, hearty enchiladas to smoky barbacoa, each dish is a celebration of bold flavors and traditional techniques. Don't forget to pair your meal with refreshing margaritas or horchata. Prepare to be enchanted by the fiery spices, rich sauces, and diverse regional specialties that make Mexican food a true culinary masterpiece. Embark on a gastronomic adventure through the flavors of Mexico and let your taste buds dance with delight!</textarea>
-                        </div>
-                        <!-- </li> -->
-                        <li class="list-group-item">
-                            <div class="p-1 d-grid gap-2 d-flex justify-content-end">
-                                <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#replymodal" data-bs-whatever="@mdo" type="button"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-reply" viewBox="0 0 16 16">
-                                        <path
-                                            d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
-                                    </svg> Reply</button>
-    
-                                <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#linkmodal" data-bs-whatever="" type="button"> <svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-share" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-                                    </svg> Share</button>
-    
-                                <button class="post-button btn btn-primary btn-sm" data-bs-toggle="" data-bs-target="#"
-                                    data-bs-whatever="@mdo" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
-                                    </svg> 23 Like</button>
-    
-                            </div>
-                </div>
-                </li>
-                </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Existing Post 3 -->
-   
-    <div class="row mx-3 mt-5 g-0">
-
-        <!-- Card 1 -->
-        <div style="width: 10rem">
-            <div class="card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-android2 m-4" viewBox="0 0 16 16">
-                    <path d="m10.213 1.471.691-1.26c.046-.083.03-.147-.048-.192-.085-.038-.15-.019-.195.058l-.7 1.27A4.832 4.832 0 0 0 8.005.941c-.688 0-1.34.135-1.956.404l-.7-1.27C5.303 0 5.239-.018 5.154.02c-.078.046-.094.11-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.697 3.697 0 0 0 3.5 5.02h9c0-.75-.208-1.44-.623-2.072a4.266 4.266 0 0 0-1.664-1.476ZM6.22 3.303a.367.367 0 0 1-.267.11.35.35 0 0 1-.263-.11.366.366 0 0 1-.107-.264.37.37 0 0 1 .107-.265.351.351 0 0 1 .263-.11c.103 0 .193.037.267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264Zm4.101 0a.351.351 0 0 1-.262.11.366.366 0 0 1-.268-.11.358.358 0 0 1-.112-.264c0-.103.037-.191.112-.265a.367.367 0 0 1 .268-.11c.104 0 .19.037.262.11a.367.367 0 0 1 .107.265c0 .102-.035.19-.107.264ZM3.5 11.77c0 .294.104.544.311.75.208.204.46.307.76.307h.758l.01 2.182c0 .276.097.51.292.703a.961.961 0 0 0 .7.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182c0 .276.097.51.292.703a.972.972 0 0 0 .71.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76c.291 0 .54-.103.749-.308.207-.205.311-.455.311-.75V5.365h-9v6.404Zm10.495-6.587a.983.983 0 0 0-.702.278.91.91 0 0 0-.293.685v4.063c0 .271.098.501.293.69a.97.97 0 0 0 .702.284c.28 0 .517-.095.712-.284a.924.924 0 0 0 .293-.69V6.146a.91.91 0 0 0-.293-.685.995.995 0 0 0-.712-.278Zm-12.702.283a.985.985 0 0 1 .712-.283c.273 0 .507.094.702.283a.913.913 0 0 1 .293.68v4.063a.932.932 0 0 1-.288.69.97.97 0 0 1-.707.284.986.986 0 0 1-.712-.284.924.924 0 0 1-.293-.69V6.146c0-.264.098-.491.293-.68Z"/>
-                  </svg>
-            <div class="card-body">
-                <h5 class="card-title">Mr Pessimist</h5>
-                <p class="card-text">Member</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-body-secondary">Last updated 1 month ago</small>
-            </div>
-        </div>
-    </div>
-
-        <!-- Card 2 -->
-        <div style="width: 65rem">
-            <div class="card h-100">
+        <!-- Card 2  -->
+        <div class=" card-group row col-10 col-sm-10 align-right h-100 d-inline-block">
+            <div class="postgroup">
                 <ul class="list-group">
-                    <li class="list-group-item ">Thursday April 6 2023 19:43:32</li>
+                    <li class="list-group-item ">Saturday May 20 2023 14:43:32</li>
                     <!-- <li class="list-group-item"> -->
-                    <div>
-                        <textarea class="form-control " aria-label="With textarea"
-                            rows="8">Embark on a culinary voyage through the flavors of Italy, where food is a celebration of life. Delight in the rich tomato sauce of a classic Spaghetti Bolognese, savor the creamy indulgence of a Margherita Pizza, and experience the heavenly combination of fresh basil, mozzarella, and juicy tomatoes in Caprese Salad. From hearty lasagna to delicate tiramisu, each dish reflects Italy's passion for gastronomy. So raise your glass of Chianti and immerse yourself in the enchanting world of Italian cuisine!</textarea>
-                    </div>
-                    <!-- </li> -->
+
+                    <p id="postContent" class="form-control" aria-label="With textarea" style="overflow-y: auto">Immerse yourself in the bustling world of Thai street food, where flavors collide and ignite your taste buds. From tangy Som Tam to flavorful Massaman Curry, zesty Chicken Satay to crispy Pad Krapow, every bite tells a story. Indulge in the authentic charm of Thailand's vibrant culinary scene and let your senses be dazzled by the symphony of spices and fresh ingredients. Get ready for a gastronomic adventure unlike any other!</p>
+
                     <li class="list-group-item">
                         <div class="p-1 d-grid gap-2 d-flex justify-content-end">
                             <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#replymodal" data-bs-whatever="@mdo" type="button"><svg
+                                    data-bs-target="#replymodal" data-bs-whatever="@mdo" type="button"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-reply" viewBox="0 0 16 16">
-                                    <path
+                                <path
                                         d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
-                                </svg> Reply</button>
+                            </svg> Reply</button>
 
                             <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#linkmodal" data-bs-whatever="" type="button"> <svg
+                                    data-bs-target="#linkmodal" data-bs-whatever="" type="button"> <svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-share" viewBox="0 0 16 16">
-                                    <path
+                                <path
                                         d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-                                </svg> Share</button>
+                            </svg> Share</button>
 
                             <button class="post-button btn btn-primary btn-sm" data-bs-toggle="" data-bs-target="#"
-                                data-bs-whatever="@mdo" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                    height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
-                                    <path
+                                    data-bs-whatever="@mdo" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                               height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path
                                         d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
-                                </svg> 37 Like</button>
+                            </svg> 11 Like</button>
 
                         </div>
-            </div>
+
             </li>
             </ul>
             </div>
         </div>
+    </div>
+    <!-- Existing Post 2 -->
+    <!-- Card 1  -->
+    <div class="posting padLeft30 padTop20 ">
+        <div class="card-group1 row col-2 col-sm-2">
+            <div class="card text-center " style="width: 18rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                     class="bi bi-emoji-angry-fill mobile-screen" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM4.053 4.276a.5.5 0 0 1 .67-.223l2 1a.5.5 0 0 1 .166.76c.071.206.111.44.111.687C7 7.328 6.552 8 6 8s-1-.672-1-1.5c0-.408.109-.778.285-1.049l-1.009-.504a.5.5 0 0 1-.223-.67zm.232 8.157a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 1 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5 0-.247.04-.48.11-.686a.502.502 0 0 1 .166-.761l2-1a.5.5 0 1 1 .448.894l-1.009.504c.176.27.285.64.285 1.049 0 .828-.448 1.5-1 1.5z"/>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Mr Negative</h5>
+                    <p class="card-text">Member</p>
+                </div>
+                <div class="card-footer mobile-screen">
+                    <small class="text-body-secondary mobile-screen">Last updated 3 weeks ago</small>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2  -->
+        <div class=" card-group row col-10 col-sm-10 align-right h-100 d-inline-block">
+            <div class="postgroup">
+                <ul class="list-group">
+                    <li class="list-group-item ">Saturday May 2 2023 19:43:32</li>
+                    <!-- <li class="list-group-item"> -->
 
+                    <p id="postContent" class="form-control" aria-label="With textarea" style="overflow-y: auto">Experience the vibrant tapestry of Mexican cuisine that tantalizes the palate. From sizzling fajitas to zesty guacamole, hearty enchiladas to smoky barbacoa, each dish is a celebration of bold flavors and traditional techniques. Don't forget to pair your meal with refreshing margaritas or horchata. Prepare to be enchanted by the fiery spices, rich sauces, and diverse regional specialties that make Mexican food a true culinary masterpiece. Embark on a gastronomic adventure through the flavors of Mexico and let your taste buds dance with delight!</p>
+
+                    <li class="list-group-item">
+                        <div class="p-1 d-grid gap-2 d-flex justify-content-end">
+                            <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#replymodal" data-bs-whatever="@mdo" type="button"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-reply" viewBox="0 0 16 16">
+                                <path
+                                        d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
+                            </svg> Reply</button>
+
+                            <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#linkmodal" data-bs-whatever="" type="button"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-share" viewBox="0 0 16 16">
+                                <path
+                                        d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                            </svg> Share</button>
+
+                            <button class="post-button btn btn-primary btn-sm" data-bs-toggle="" data-bs-target="#"
+                                    data-bs-whatever="@mdo" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                               height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path
+                                        d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                            </svg> 5 Like</button>
+
+                        </div>
+
+            </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Existing Post 3 -->
+    <!-- Card 1  -->
+    <div class="posting padLeft30 padTop20 ">
+        <div class="card-group1 row col-2 col-sm-2">
+            <div class="card text-center " style="width: 18rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                     class="bi bi-android2 mobile-screen" viewBox="0 0 16 16">
+                    <path d="m10.213 1.471.691-1.26c.046-.083.03-.147-.048-.192-.085-.038-.15-.019-.195.058l-.7 1.27A4.832 4.832 0 0 0 8.005.941c-.688 0-1.34.135-1.956.404l-.7-1.27C5.303 0 5.239-.018 5.154.02c-.078.046-.094.11-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.697 3.697 0 0 0 3.5 5.02h9c0-.75-.208-1.44-.623-2.072a4.266 4.266 0 0 0-1.664-1.476ZM6.22 3.303a.367.367 0 0 1-.267.11.35.35 0 0 1-.263-.11.366.366 0 0 1-.107-.264.37.37 0 0 1 .107-.265.351.351 0 0 1 .263-.11c.103 0 .193.037.267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264Zm4.101 0a.351.351 0 0 1-.262.11.366.366 0 0 1-.268-.11.358.358 0 0 1-.112-.264c0-.103.037-.191.112-.265a.367.367 0 0 1 .268-.11c.104 0 .19.037.262.11a.367.367 0 0 1 .107.265c0 .102-.035.19-.107.264ZM3.5 11.77c0 .294.104.544.311.75.208.204.46.307.76.307h.758l.01 2.182c0 .276.097.51.292.703a.961.961 0 0 0 .7.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182c0 .276.097.51.292.703a.972.972 0 0 0 .71.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76c.291 0 .54-.103.749-.308.207-.205.311-.455.311-.75V5.365h-9v6.404Zm10.495-6.587a.983.983 0 0 0-.702.278.91.91 0 0 0-.293.685v4.063c0 .271.098.501.293.69a.97.97 0 0 0 .702.284c.28 0 .517-.095.712-.284a.924.924 0 0 0 .293-.69V6.146a.91.91 0 0 0-.293-.685.995.995 0 0 0-.712-.278Zm-12.702.283a.985.985 0 0 1 .712-.283c.273 0 .507.094.702.283a.913.913 0 0 1 .293.68v4.063a.932.932 0 0 1-.288.69.97.97 0 0 1-.707.284.986.986 0 0 1-.712-.284.924.924 0 0 1-.293-.69V6.146c0-.264.098-.491.293-.68Z"/>
+
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Mr Pessimist</h5>
+                    <p class="card-text">Member</p>
+                </div>
+                <div class="card-footer mobile-screen">
+                    <small class="text-body-secondary mobile-screen">Last updated 1 month ago</small>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2  -->
+        <div class=" card-group row col-10 col-sm-10 align-right h-100 d-inline-block">
+            <div class="postgroup">
+                <ul class="list-group">
+                    <li class="list-group-item ">Thursday April 6 2023 21:43:32</li>
+                    <!-- <li class="list-group-item"> -->
+
+                    <p id="postContent" class="form-control" aria-label="With textarea" style="overflow-y: auto">Embark on a culinary voyage through the flavors of Italy, where food is a celebration of life. Delight in the rich tomato sauce of a classic Spaghetti Bolognese, savor the creamy indulgence of a Margherita Pizza, and experience the heavenly combination of fresh basil, mozzarella, and juicy tomatoes in Caprese Salad. From hearty lasagna to delicate tiramisu, each dish reflects Italy's passion for gastronomy. So raise your glass of Chianti and immerse yourself in the enchanting world of Italian cuisine!</p>
+
+                    <li class="list-group-item">
+                        <div class="p-1 d-grid gap-2 d-flex justify-content-end">
+                            <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#replymodal" data-bs-whatever="@mdo" type="button"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-reply" viewBox="0 0 16 16">
+                                <path
+                                        d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
+                            </svg> Reply</button>
+
+                            <button class="post-button btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#linkmodal" data-bs-whatever="" type="button"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-share" viewBox="0 0 16 16">
+                                <path
+                                        d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                            </svg> Share</button>
+
+                            <button class="post-button btn btn-primary btn-sm" data-bs-toggle="" data-bs-target="#"
+                                    data-bs-whatever="@mdo" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                               height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path
+                                        d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                            </svg> 33 Like</button>
+
+                        </div>
+
+            </li>
+            </ul>
+            </div>
+        </div>
     </div>
 </div>
-
-    <!-- Insert Footer -->
-    <div th:insert="~{common/footer :: footer}" id="footer"></div>
-
-
-    <!-- Insert Modal -->
-    <div id="modal"></div>
+<!-- Insert Footer -->
+<div th:insert="~{common/footer :: footer}" id="footer"></div>
 
 
-    <!-- Script for Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+<!-- Insert Modal -->
+<div id="modal"></div>
+
+
+<!-- Script for Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <!-- Script for jquery   -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<!-- Script for jquery   -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
 
-    <!-- <script src="jquery.min.js" type="text/javascript"></script>
+<!-- <script src="jquery.min.js" type="text/javascript"></script>
 <script src="jquery.timeago.js" type="text/javascript"></script> -->
 
-    <!-- Script for Common Components -->
-    <!--    <script>-->
-    <!--        $(document).ready(function () {-->
-    <!--            $("#navbar").load("common/navbar.html");-->
-    <!--            $("#modal").load("common/sharelinkmodal.html");-->
-    <!--            $("#footer").load("common/footer.html");-->
-    <!--        });-->
-    <!--    </script>-->
-
-
-    <script src="js/postController.js"></script>
-    <script src="js/postForm.js"></script>
-    <script src="js/postListing.js"></script>
+<!-- Script for Common Components -->
+<!--    <script>-->
+<!--        $(document).ready(function () {-->
+<!--            $("#navbar").load("common/navbar.html");-->
+<!--            $("#modal").load("common/sharelinkmodal.html");-->
+<!--            $("#footer").load("common/footer.html");-->
+<!--        });-->
+<!--    </script>-->
 
 
 
 </body>
 
 </html>
+
+

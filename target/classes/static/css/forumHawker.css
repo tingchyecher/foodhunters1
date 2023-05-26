@@ -125,50 +125,47 @@
     cursor: pointer;
   }
   
-
-
-
-
+/* Mobile Styles */
 @media screen and (max-width: 768px) {
+  .mobile-screen {
+    display: none;
+  }
 
-    .mobile-screen {
-        display: none;
-    }
+  .replyButton {
+    display: none;
+  }
 
-    .replyButton {
-        display: none;
-    }
+  .mobileReply {
+    display: grid;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
 
-    .mobileReply {
-        display: grid;
-        justify-content: center;
-        padding-left: 20px;
-        padding-right: 50px;
-        padding-bottom: 20px;
-        width: 100%;
-    }
+  .mobilenavi {
+    display: block;
+  }
 
-    .mobilenavi {
-        display: block;
-    }
+  .posting {
+    width: 100%;
+    display: flex;
+  }
 
-    .posting {
-        width: 100%;
-        display: flex;
-      
-    }
+  .posting img {
+    width: 30%;
+  }
 
-    .posting img {
-        width: 30%;
-    
-    }
+  .card-footer {
+    display: block;
+  }
 
-    .card-group {
-        width: auto;
-    }
+   .card {
+       height: 225px;
+       width: 200px;
+       }
 
-    .card-footer {
-        display;
-    }
+
 
 }

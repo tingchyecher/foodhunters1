@@ -145,15 +145,16 @@ function renderPostPage() {
 
        display += `
        <div class="posting padLeft30 padTop20 ">
-        <div class="card-group row col-2 col-sm-2">
+        <div class="card-group1 row col-2 col-sm-2">
             <div class="card text-center " style="width: 18rem;">
-                <img id="postImg"  src=${userDetails[user].profilePic} alt="">
+                <img class="mobile-screen" id="postImg"  src=${userDetails[user].profilePic} alt="">
                 <div class="card-body">
                     <h5 id="postUsername" class="card-title">${userDetails[user].userName}</h5>
                     <p class="card-text">Member</p>
                 </div>
                 <div class="card-footer mobile-screen">
-                    <small id="timeAgo${i}" class="text-body-secondary">${timeAgo(replyController[i].postDate)}</small>
+                    <small class="mobile-screen" id="timeAgo${i}" class="text-body-secondary">${timeAgo(replyController[i].postDate)
+                    }</small>
                 </div>
             </div>
         </div>

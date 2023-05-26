@@ -45,7 +45,7 @@ public class UsersController {
     @GetMapping( "/all" )
     public Iterable<Users> getItems()
     {
-        //To display images from local folder
+//        To display images from local folder
 //        for (Users image: usersService.all())
 //        {
 //            //productimages/t-shirt1.jpg
