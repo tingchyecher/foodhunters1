@@ -17,7 +17,7 @@
 // Production APIs
 const replyAPI = 'https://foodhunters.azurewebsites.net/post/add';
 const displayReplyAPI = 'https://foodhunters.azurewebsites.net/post/all';
-const userAPI = 'https://foodhunters.azurewebsites.net/users/all';
+const usersAPI = 'https://foodhunters.azurewebsites.net/users/all';
 
 // Create empty array for replyController
 let replyController = [];
@@ -27,7 +27,7 @@ let userDetails = [];
 
 // Fetch the username from the user API
 function fetchUsername() {
-  fetch(userAPI)
+  fetch(usersAPI)
     .then((resp) => resp.json())
     .then(function (data) {
 //      userName = data.username; // Assign the username to the global variable

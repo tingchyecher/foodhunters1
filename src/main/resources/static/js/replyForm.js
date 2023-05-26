@@ -47,7 +47,7 @@ newReplyForm.addEventListener('submit', (event) => {
 
 
   // 3)  calls a function from the productController.js to access the API to add items to the database
-  replyPost(content, postDate,  idTopic, idUsers/*, imageUrl, storeImage*/);  //arguments
+  replyPost(content, postDate,  idTopic, idUsers);  //arguments
 
 
 // select file input
